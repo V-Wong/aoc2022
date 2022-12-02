@@ -1,4 +1,5 @@
 mod q1;
+mod q2;
 
 use clap::Parser;
 
@@ -17,6 +18,8 @@ fn main() {
     let solution: i32 = match args.question.as_str() {
         "q1a" => q1::solve_a(&input),
         "q1b" => q1::solve_b(&input),
+        "q2a" => q2::solve_a(&input),
+        "q2b" => q2::solve_b(&input),
         _ => panic!("Invalid question"),
     };
 
