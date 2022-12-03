@@ -1,5 +1,6 @@
 mod q1;
 mod q2;
+mod q3;
 
 use clap::Parser;
 
@@ -20,6 +21,8 @@ fn main() {
         "q1b" => q1::solve_b(&input),
         "q2a" => q2::solve_a(&input),
         "q2b" => q2::solve_b(&input),
+        "q3a" => q3::solve_a(&input),
+        "q3b" => q3::solve_b(&input),
         _ => panic!("Invalid question"),
     };
 
