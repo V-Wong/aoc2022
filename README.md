@@ -4,3 +4,4 @@
 - [Day 2: Rock Paper Scissors](src/q2.rs)
 - [Day 3: Rucksack Reorganization](src/q3.rs)
 - [Day 4: Camp Cleanup](src/q4.rs)
+- [Day 5: Supply Stacks](src/q5.rs)

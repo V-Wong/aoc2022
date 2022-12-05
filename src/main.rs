@@ -2,6 +2,7 @@ mod q1;
 mod q2;
 mod q3;
 mod q4;
+mod q5;
 
 use clap::Parser;
 
@@ -26,6 +27,8 @@ fn main() {
         "q3b" => Box::new(q3::solve_b(&input)),
         "q4a" => Box::new(q4::solve_a(&input)),
         "q4b" => Box::new(q4::solve_b(&input)),
+        "q5a" => Box::new(q5::solve_a(&input)),
+        "q5b" => Box::new(q5::solve_b(&input)),
         _ => panic!("Invalid question"),
     };
 
