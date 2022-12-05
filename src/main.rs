@@ -17,17 +17,17 @@ fn main() {
 
     let input = std::fs::read_to_string(&args.input_path).expect("Could not open file");
 
-    let solution: i32 = match args.question.as_str() {
-        "q1a" => q1::solve_a(&input),
-        "q1b" => q1::solve_b(&input),
-        "q2a" => q2::solve_a(&input),
-        "q2b" => q2::solve_b(&input),
-        "q3a" => q3::solve_a(&input),
-        "q3b" => q3::solve_b(&input),
-        "q4a" => q4::solve_a(&input),
-        "q4b" => q4::solve_b(&input),
+    let solution: Box<dyn std::fmt::Debug> = match args.question.as_str() {
+        "q1a" => Box::new(q1::solve_a(&input)),
+        "q1b" => Box::new(q1::solve_b(&input)),
+        "q2a" => Box::new(q2::solve_a(&input)),
+        "q2b" => Box::new(q2::solve_b(&input)),
+        "q3a" => Box::new(q3::solve_a(&input)),
+        "q3b" => Box::new(q3::solve_b(&input)),
+        "q4a" => Box::new(q4::solve_a(&input)),
+        "q4b" => Box::new(q4::solve_b(&input)),
         _ => panic!("Invalid question"),
     };
 
-    println!("Solution to {}: {}", args.question, solution);
+    println!("Solution to {}: {:?}", args.question, solution);
 }
